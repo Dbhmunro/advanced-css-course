@@ -51,6 +51,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -59,6 +60,8 @@ body {
 
     /* fixes the shake that can happen at the end of the animation */
     backface-visibility: hidden;
+
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -81,6 +84,7 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
 
+    /* shorthand for the commented out code below */
     animation: moveInRight 1s ease-out;
     /* animation-name: moveInRight;
     animation-duration: 1s;
@@ -117,4 +121,31 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.bt:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    /* first value is x direction, second is y direction, third is shadow blur, fourth is color */
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translate(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
